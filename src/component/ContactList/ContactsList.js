@@ -17,7 +17,10 @@ export default function ContactsList({ contacts, onDelete }) {
   );
 }
 ContactsList.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  number: PropTypes.string,
+  contacts: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    number: PropTypes.string,
+  }),
+  onDelete: PropTypes.func.isRequired,
 };
